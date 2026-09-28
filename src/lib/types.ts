@@ -4,20 +4,22 @@ interface Student {
   lastName: string;
   program: "CPE" | "ISNE";
   courses?: string[];
+  status: "Active" | "Inactive";
+  enrolledCourses: string[];
 }
 export type { Student };
 
 interface Course {
-  courseId: string;
+  courseCode: string;
   courseTitle: string;
-  instructors: string[];
+  instructors?: string[];
 }
 export type { Course };
 
 interface Enrollment {
   studentId: string;
   courseId: string;
-  enrolledAt?: string; 
+  enrolledAt?: string;
 }
 export type { Enrollment };
 
